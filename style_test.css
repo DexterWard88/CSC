@@ -196,6 +196,7 @@ p {
     text-align: center;
     font-size: .8rem;
     line-height: 1rem;
+    text-transform: uppercase;
     color: rgb(40, 40, 40);
 }
 
@@ -303,6 +304,7 @@ p {
     color: #293b50;
     font-size: 1.4rem;
     margin-bottom: 1vh;
+    text-align: center;
 }
 
 .main p {
@@ -343,8 +345,95 @@ footer {
         line-height: 2.4rem;
     }
 
+    .counter_element p {
+        text-align: center;
+        font-size: 0.6rem;
+        line-height: 1rem;
+    }
+
     .cta {
-        height: 50svh;
+        height: 70vh;
+        justify-content: space-around;
+
+    }
+
+    .btn {
+        min-height: 75px;
+        max-height: 250px;
+        max-width: 250px;
+        border-radius: 35px;
+        font-size: 1.0rem;
+        line-height: 1.1rem;
+
+    }
+
+    .btn img {
+        height: 60px;
+        padding-top: 7.55%;
+    }
+
+    .btn h3 {
+        margin: 5% 5%;
+    }
+
+    .btn p {
+        font-size: 0.8rem;
+        margin: 5% 5%;
+    }
+
+    .main {
+        grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+    }
+
+    .item_4 {
+        grid-row: 2 / 3;
+    }
+
+    .item_5 {
+        grid-row: 4 / 5;
+    }
+
+    .main img {
+        width: 100%;
+    }
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media only screen and (min-width:321px) and (max-width: 480px) {
+
+    .header {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 60vw;
+        margin-top: 1vh;
+        margin-top: 15vh;
+    }
+
+    h1 {
+        font-size: 2.2rem;
+        line-height: 2.4rem;
+    }
+
+    .counter_element {
+        padding: 10% 0;
+        height: 30vh;
+    }
+
+    .counter_element p {
+        font-size: 0.8rem;
+        line-height: 1.2rem;
+
+    }
+
+    .cta {
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        height: 75vh;
     }
 
     .btn {
@@ -366,148 +455,204 @@ footer {
         grid-row: 4 / 5;
     }
 
+    .main h2 {
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+    }
+
+    .main h3 {
+        color: #293b50;
+        font-size: 1.8rem;
+        margin-bottom: 3vh;
+    }
+
     .main img {
-        width: 100%;
-    }
-
-    /* smartphones, Android phones, landscape iPhone */
-    @media only screen and (min-width: 480px) {
-
-        .header {
-            height: 100vh;
-        }
-
-        .logo {
-            width: 25vw;
-            margin-top: 1vh;
-        }
-
-        h1 {
-            font-size: 2.4rem;
-        }
-
-        .main {
-            grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
-        }
-
-        .cta {
-            background-color: white;
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            height: 100vh;
-        }
-
-        .btn {
-            min-height: 100px;
-            max-height: 300px;
-            max-width: 250px;
-            border-radius: 35px;
-        }
-
-        .item_4 {
-            grid-row: 2 / 3;
-        }
-
-        .item_5 {
-            grid-row: 4 / 5;
-        }
-
-        .main h2 {
-            font-size: 2.6rem;
-            line-height: 2.6rem;
-        }
-
-        .main h3 {
-            color: #293b50;
-            font-size: 1.8rem;
-            margin-bottom: 3vh;
-        }
-
-        .main img {
-            width: 50%;
-        }
-    }
-
-    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-    @media (min-width:600px) {
-        .header {
-            height: 65vh;
-        }
-
-        .logo {
-            width: 45vw;
-            margin-top: 5vh;
-        }
-
-        h1 {
-            font-size: 2.8rem;
-            line-height: 3.2rem
-        }
-
-        .counter_element {
-            padding: 10% 0;
-            height: 20vh;
-        }
-
-        .counter_element p {
-            font-size: 1.2rem;
-            line-height: 1.4rem;
-        }
-
-        .cta {
-            height: 45vh;
-        }
-
-        .btn {
-            min-height: 200px;
-            max-height: 350px;
-            min-width: 250px;
-            max-width: 300px;
-            border-radius: 35px;
-        }
-
-        .main h2 {
-            font-size: 2.8rem;
-            line-height: 3.4rem;
-        }
-
-        .main h3 {
-            color: #293b50;
-            font-size: 2.2rem;
-            margin-bottom: 3vh;
-        }
-
-        .main p {
-            color: #293b50;
-            font-size: 1.2rem;
-            line-height: 1.6rem;
-            margin-bottom: 3vh;
-        }
-
-        .main img {
-            width: 70%;
-        }
-    }
-
-    /* tablet, landscape iPad, lo-res laptops ands desktops */
-    @media (min-width:801px) {}
-
-    /* big landscape tablets, laptops, and desktops */
-    @media (min-width:1025px) {}
-
-    /* TV, hi-res laptops and desktops */
-    @media (min-width:1281px) {
-        .header {
-            height: 100vh;
-        }
-
-        .logo {
-            width: 45vw;
-            margin-top: 5vh;
-        }
+        width: 85%;
     }
 }
 
-    /* ---------------- MQ End ------------------- */
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:481px) and (max-width: 600px) {
+    .header {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 60vw;
+        margin-top: 10vh;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 3.2rem
+    }
+
+    .counter_element {
+        padding: 10% 0;
+        height: 20vh;
+    }
+
+    .counter_element p {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .cta {
+        height: 75vh;
+    }
+
+    .btn {
+        min-height: 200px;
+        max-height: 350px;
+        min-width: 250px;
+        max-width: 300px;
+        border-radius: 35px;
+    }
+
+    .main h2 {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+    }
+
+    .main h3 {
+        color: #293b50;
+        font-size: 2.2rem;
+        margin-bottom: 3vh;
+    }
+
+    .main p {
+        color: #293b50;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin-bottom: 3vh;
+    }
+
+    .main {
+        grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+    }
+
+    .item_4 {
+        grid-row: 2 / 3;
+    }
+
+    .item_5 {
+        grid-row: 4 / 5;
+    }
+
+    .main h2 {
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+    }
+
+    .main h3 {
+        color: #293b50;
+        font-size: 1.8rem;
+        margin-bottom: 3vh;
+    }
+
+    .main img {
+        width: 85%;
+    }
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:601px) and (max-width: 800px) {
+    .header {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 60vw;
+        margin-top: 10vh;
+    }
+
+    h1 {
+        font-size: 2.8rem;
+        line-height: 3.2rem
+    }
+
+    .counter_element {
+        padding: 10% 0;
+        height: 20vh;
+    }
+
+    .counter_element p {
+        font-size: 1.2rem;
+        line-height: 1.4rem;
+    }
+
+    .cta {
+        height: 85vh;
+    }
+
+    .btn {
+        min-height: 200px;
+        max-height: 350px;
+        min-width: 250px;
+        max-width: 300px;
+        border-radius: 35px;
+    }
+
+    .main h2 {
+        font-size: 2.8rem;
+        line-height: 3.4rem;
+    }
+
+    .main h3 {
+        color: #293b50;
+        font-size: 2.2rem;
+        margin-bottom: 3vh;
+    }
+
+    .main p {
+        color: #293b50;
+        font-size: 1.2rem;
+        line-height: 1.6rem;
+        margin-bottom: 3vh;
+    }
+
+    .main {
+        grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
+    }
+
+    .item_4 {
+        grid-row: 2 / 3;
+    }
+
+    .item_5 {
+        grid-row: 4 / 5;
+    }
+
+    .main h2 {
+        font-size: 2.6rem;
+        line-height: 2.6rem;
+    }
+
+    .main h3 {
+        color: #293b50;
+        font-size: 1.8rem;
+        margin-bottom: 3vh;
+    }
+
+    .main img {
+        width: 65%;
+    }
+}
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) {}
+
+/* TV, hi-res laptops and desktops */
+@media (min-width:1281px) {
+    .header {
+        height: 100vh;
+    }
+
+    .logo {
+        width: 45vw;
+        margin-top: 5vh;
+    }
+}
+
+
+/* ---------------- MQ End ------------------- */
