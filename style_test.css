@@ -317,7 +317,7 @@ p {
 /* ---------------- Footer Start ------------------- */
 footer {
     display: flex;
- align-items: center;
+    align-items: center;
     justify-content: start;
     row-gap: 100px;
     height: 10vh;
@@ -343,7 +343,7 @@ footer {
         line-height: 2.4rem;
     }
 
-    .cta{
+    .cta {
         height: 75vh;
     }
 
@@ -413,11 +413,12 @@ footer {
         .item_5 {
             grid-row: 4 / 5;
         }
+
         .main h2 {
-           font-size: 2.6rem;
+            font-size: 2.6rem;
             line-height: 2.6rem;
         }
-        
+
         .main h3 {
             color: #293b50;
             font-size: 1.8rem;
@@ -429,12 +430,69 @@ footer {
         }
     }
 
+    /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
     @media (min-width:600px) {
-        /* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
-    }
+        .header {
+            height: 65vh;
+        }
 
+        .logo {
+            width: 45vw;
+            margin-top: 5vh;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            line-height: 3.2rem
+        }
+
+        .counter_element {
+            padding: 10% 0;
+            height: 20vh;
+        }
+
+        .counter_element p {
+            font-size: 1.2rem;
+            line-height: 1.4rem;
+        }
+
+        .cta{
+            height: 45vh;
+        }
+
+        .btn {
+            min-height: 200px;
+            max-height: 350px;
+            min-width: 250px;
+            max-width: 300px;
+            border-radius: 35px;
+        }
+
+        .main h2 {
+            font-size: 2.8rem;
+            line-height: 3.4rem;
+        }
+
+        .main h3 {
+            color: #293b50;
+            font-size: 2.2rem;
+            margin-bottom: 3vh;
+        }
+
+        .main p {
+            color: #293b50;
+            font-size: 1.2rem;
+            line-height: 1.6rem;
+            margin-bottom: 3vh;
+        }
+
+        .main img{
+            width: 70%;
+        }
+    }
+/* tablet, landscape iPad, lo-res laptops ands desktops */
     @media (min-width:801px) {
-        /* tablet, landscape iPad, lo-res laptops ands desktops */
+        
     }
 
     @media (min-width:1025px) {
