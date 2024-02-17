@@ -52,6 +52,16 @@
     width: 100%;
 }
 
+a:link {
+    color: white;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #417dc1;
+    text-decoration: none;
+  }
+
 /* -----------------Fonts Start-------------------- */
 h1 {
     color: white;
@@ -304,9 +314,16 @@ p {
 }
 
 /* ---------------- Main End ------------------- */
-
-
-
+/* ---------------- Footer Start ------------------- */
+footer {
+    display: flex;
+    gap: 10vw;
+    align-items: center;
+  
+    height: 10vh;
+    background-color: #293b50;
+  }
+/* ---------------- Footer End ------------------- */
 
 
 
@@ -321,7 +338,20 @@ p {
     }
 
     h1 {
-        font-size: 3rem;
+        font-size: 2rem;
+        line-height: 2.4rem;
+    }
+
+    .btn {
+        min-height: 100px;
+        max-height: 300px;
+        min-width: auto;
+        max-width: 250px;
+        background-image: linear-gradient(0deg, #2c3d51, #5082bc);
+        border-radius: 35px;
+        font-size: 1.2rem;
+        color: white;
+        line-height: 1.3rem;
     }
 .main{
     grid-template-rows: 0.5fr 1fr 0.5fr 1fr 0.5fr 1fr;
