@@ -44,6 +44,40 @@ p {
   letter-spacing: 0.025rem;
 }
 
+/* Add a black background color to the top navigation */
+.topnav {
+  background-color: #4a678a;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+  background-color: #293b50;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
 .section_1 {
   background-color: #4a678a;
   height: 75vh;
@@ -65,6 +99,7 @@ p {
 .section_1 img {
   width: 15%;
 }
+
 a:link {
   color: white;
   text-decoration: none;
@@ -84,8 +119,11 @@ a:hover {
   background-image: url(./content/header_background.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
-  padding: 10%;
+  height: 100vh;
+}
+
+.header h1 {
+  padding: 0 5vh;
 }
 
 .textbox {
@@ -95,8 +133,14 @@ a:hover {
   background-color: lightgray;
   box-shadow: 0px 0px 20px #2c3d51;
 }
+
 .logo {
-  width: 22rem;
+  width: 30rem;
+
+}
+
+.logo h1 {
+  margin-bottom: 200px;
 }
 
 .counter {
@@ -142,13 +186,9 @@ a:hover {
   max-height: 300px;
   min-width: auto;
   max-width: 350px;
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 0.75fr 1fr;
-  background-color: #658dbd;
-  border-radius: 10px;
-  justify-items: center;
-  align-items: center;
+  background-image: linear-gradient(0deg, #2c3d51, #5082bc);
+  border-radius: 45px;
+
 }
 
 .button p {
@@ -168,10 +208,7 @@ a:hover {
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
 }
-.section_2 img {
-  height: 800px;
-  object-fit: cover;
-}
+
 .content p {
   color: #2c3d51;
 }
@@ -194,7 +231,8 @@ a:hover {
   font-size: 15rem;
   background-color: lightgray;
 }
-.content img {
+
+content img {
   object-fit: contain;
 }
 
@@ -203,20 +241,33 @@ a:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10%;
 }
 
-@media only screen and (min-width: 1200px) {
+footer {
+  display: flex;
+  gap: 10vw;
+  align-items: center;
+
+  height: 10vh;
+  background-color: #293b50;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 1400px) {}
+
+@media only screen and (min-width: 1200px) {}
+
+@media only screen and (min-width: 1024px) {}
+
+media only screen and (max-width: 482px) {
   h1 {
     font-size: 2rem;
     margin-bottom: 5%;
   }
+
   .header {
     height: 100vh;
   }
+
   .logo {
     width: 15rem;
     margin-bottom: 15%;
@@ -237,18 +288,103 @@ a:hover {
     letter-spacing: 0.2rem;
     font-size: 1.1rem;
   }
+
   .section_2 {
     height: auto;
     display: grid;
-  
+
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(1, 1fr);
   }
-  .section_2 img {
-    height: 400px;
+
+
+  .section_3 {
+    flex-direction: column;
+  }
+}
+
+
+
+@media only screen and (max-width: 768px) {
+  h1 {
+    font-size: 2.6rem;
+    margin-bottom: 300px;
   }
 
-  .section_3{
+  .header {
+    height: 100vh;
+  }
+
+  .logo {
+    width: 20rem;
+    margin-bottom: 100px;
+  }
+
+  .section_1 {
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .counter_element p {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: darkgrey;
+    letter-spacing: 0.2rem;
+    font-size: 1.1rem;
+  }
+
+  .section_2 {
+    height: auto;
+    display: grid;
+
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section_3 {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  h1 {
+    font-size: 2.2rem;
+    margin-bottom: 300px;
+  }
+
+  .logo {
+    width: 18rem;
+
+  }
+
+  .section_1 {
+    padding: 1rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+  }
+
+  .counter_element p {
+    font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+    color: darkgrey;
+    letter-spacing: 0.2rem;
+    font-size: 1.1rem;
+  }
+
+  .section_2 {
+    height: auto;
+    display: grid;
+
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .section_3 {
     flex-direction: column;
   }
 }
