@@ -1,0 +1,168 @@
+:root {
+    --clr-prmaray-200: #658DBD;
+    --clr-prmaray-400: #4A678A;
+
+    --clr-neutral-100: #FFF;
+    --clr-neutral-200: #E6E6E6;
+    --clr-neutral-500: #808080;
+    --clr-neutral-900: #222C2A;
+
+    --ff-primary: 'Roboto', sans-serif;
+    --ff-accent: 'Playfair Display', serif;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #417dc1;
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--ff-primary);
+    font-weight: 400;
+    /* 21px when Browser Default of font-size:16pt; is applied*/
+    font-size: 1.3125rem;
+    line-height: 1.6;
+}
+
+
+/* utility Classes */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: var(--ff-accent);
+    font-weight: 900;
+    line-height: 1;
+}
+
+.bg-light {
+    background-color: var(--clr-neutral-100);
+}
+
+.bg-primary {
+    background-color: var(--clr-prmaray-400);
+    color: var(--clr-neutral-100);
+}
+
+.bg-dark {
+    background-color: var(--clr-neutral-900);
+    color: var(--clr-neutral-100);
+}
+
+section{
+    padding:3rem 0;
+}
+
+.container{
+    margin-inline: auto;  // margin left and right, use -block for top and bottom
+    width: min(90%, 70.5rem);
+}
+
+/* ----------------- CSS Starts Here ----------------- */
+
+.header {
+    background-image: url(./content/header_background.png);
+    object-fit: cover; //Change to strecht from the right lower corner
+}
+
+.cnt{
+    display: flex;
+    gap: 5rem;
+    padding: 5rem
+}
+.cnt_items{
+    flex-basis: 100%;
+    display: flex;
+}
+
+.cta{
+
+}
+/* -----------------Nav Start-------------------- */
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #4a678a;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #293b50;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #4a678a;
+    overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Add an active class to highlight the current page */
+.topnav a.active {
+    background-color: #293b50;
+    color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+    display: none;
+}
+
+/* ---------------- Nav End ------------------- */

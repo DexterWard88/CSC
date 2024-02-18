@@ -1,55 +1,9 @@
-* {
+*,
+*::after,
+*::before {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-.col-1 {
-    width: 8.33%;
-}
-
-.col-2 {
-    width: 16.66%;
-}
-
-.col-3 {
-    width: 25%;
-}
-
-.col-4 {
-    width: 33.33%;
-}
-
-.col-5 {
-    width: 41.66%;
-}
-
-.col-6 {
-    width: 50%;
-}
-
-.col-7 {
-    width: 58.33%;
-}
-
-.col-8 {
-    width: 66.66%;
-}
-
-.col-9 {
-    width: 75%;
-}
-
-.col-10 {
-    width: 83.33%;
-}
-
-.col-11 {
-    width: 91.66%;
-}
-
-.col-12 {
-    width: 100%;
 }
 
 a:link {
@@ -62,13 +16,41 @@ a:hover {
     text-decoration: none;
 }
 
+body {
+    /* 21px when Browser Default of font-size:16pt; is applied*/
+    font-size: 1.3125rem;
+    line-height: 1.6;
+}
+
+
+/* utility Classes */
+body,
+h1,
+h2,
+h3,
+p {
+    margin: 0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Salsa", cursive;
+    font-weight: 900;
+    line-height: 1;
+}
+
+.container {
+    margin-inline: auto;
+    width: min(90%, 30rem)
+}
+
 /* -----------------Fonts Start-------------------- */
 h1 {
     color: white;
-    font-family: "Salsa", cursive;
-    font-size: 4rem;
+    font-size: 2.8rem;
     font-weight: 500;
-    line-height: 4rem;
+    line-height: 3rem;
     letter-spacing: 0.075rem;
     text-align: center;
 }
@@ -157,39 +139,36 @@ p {
 
 /* ---------------- Header Start ------------------- */
 .header {
-    height: 65vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: start;
-    align-items: center;
-    padding: 5vw;
+    padding-block: 10rem;
     background-image: url(./content/header_background.png);
 }
 
 .logo {
-    width: 25vw;
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-
+    display: block;
+    margin: 0 auto 4rem auto;
+    max-width: 90%;
 }
 
 /* ---------------- Header End ------------------- */
 /* ---------------- Counter Start ------------------- */
 
 .counter {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: rgb(40, 40, 40);
 }
 
+.counter .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 .counter_element {
+    flex-basis: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     background-color: #ddd;
-    padding: 10% 0;
-    height: 15vh;
+    padding: 4rem 1rem;
 }
 
 .counter_element p {
@@ -203,40 +182,62 @@ p {
 .middle {
     border-width: 0 4px 0 4px;
     border-style: solid;
-
     border-image: linear-gradient(180deg, rgba(64, 64, 64, 0), rgba(64, 64, 64, 1), rgba(170, 170, 170, 0)) 1 / 0 1px;
 }
 
 /* ----------------- Counter End -------------------- */
+
+/* ----------------- About Start -------------------- */
+.about {
+    background-color: #4a678a;
+    padding: 1rem;
+}
+
+.textbox {
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    background-color: lightgray;
+    box-shadow: 0px 0px 20px #2c3d51;
+}
+
+.textbox p {
+    color: rgb(40, 40, 40);
+    line-height: 1.2rem;
+    
+}
+
+.textbox h2{
+    color: rgb(40, 40, 40);
+    font-size: 1.46rem;
+}
+
+.textbox > * + *{
+    margin-top: 1rem;
+}
+
+/* ------------------ About End --------------------- */
+
 /* ----------------- CtA Start -------------------- */
 .cta {
     background-color: white;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    height: 50vh;
 }
 
 /* button */
 .btn {
-    min-height: 250px;
-    max-height: 300px;
-    min-width: auto;
-    max-width: 350px;
     background-image: linear-gradient(0deg, #2c3d51, #5082bc);
     border-radius: 45px;
     font-size: 1.2rem;
     color: white;
-    line-height: 1.3rem;
+    padding-block: 1rem;
+    margin: 2rem 0rem;
 }
 
 .btn h3 {
-    margin: 5% 5%;
+    margin-top: 1rem
 }
 
 .btn p {
-    margin: 5% 5%;
+    margin: 1rem 0.8rem;
 }
 
 .btn img {
@@ -268,18 +269,11 @@ p {
 
 /* ------------------ CtA End --------------------- */
 /* ---------------- Main Start ------------------- */
-.main {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(6, 1fr);
-}
+.main {}
 
 .item_1,
 .item_2,
 .item_3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #293b50;
 }
 
@@ -312,18 +306,20 @@ p {
 }
 
 .main img {
-    width: 80%;
+    width: 100%;
+    margin-inline: auto;
+    padding: 1rem;
 }
 
 /* ---------------- Main End ------------------- */
 /* ---------------- Footer Start ------------------- */
 footer {
-    display: flex;
-    align-items: center;
-    justify-content: start;
-    row-gap: 100px;
-    height: 10vh;
-    background-color: #293b50;
+  background-color: #293b50;
+  padding:1rem;
+}
+
+.footer > * + *{
+ margin-left: 1rem; 
 }
 
 /* ---------------- Footer End ------------------- */
@@ -331,9 +327,9 @@ footer {
 
 
 
-
+/* --
 /* ---------------- MQ Start ------------------- */
-/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) 
 @media only screen and (max-width: 320px) {
     .logo {
         width: 70vw;
@@ -398,7 +394,7 @@ footer {
     }
 }
 
-/* smartphones, Android phones, landscape iPhone */
+/* smartphones, Android phones, landscape iPhone 
 @media only screen and (min-width:321px) and (max-width: 480px) {
 
     .header {
@@ -471,7 +467,7 @@ footer {
     }
 }
 
-/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) 
 @media (min-width:481px) and (max-width: 600px) {
     .header {
         height: 100vh;
@@ -555,7 +551,7 @@ footer {
     }
 }
 
-/* tablet, landscape iPad, lo-res laptops ands desktops */
+/* tablet, landscape iPad, lo-res laptops ands desktops 
 @media (min-width:601px) and (max-width: 800px) {
     .header {
         height: 100vh;
@@ -639,10 +635,10 @@ footer {
     }
 }
 
-/* big landscape tablets, laptops, and desktops */
+/* big landscape tablets, laptops, and desktops 
 @media (min-width:1025px) {}
 
-/* TV, hi-res laptops and desktops */
+/* TV, hi-res laptops and desktops 
 @media (min-width:1281px) {
     .header {
         height: 100vh;
