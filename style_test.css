@@ -38,12 +38,23 @@ h3 {
     font-family: "Salsa", cursive;
     font-weight: 900;
     line-height: 1;
+    letter-spacing: 0.1rem;
 }
 
 .container {
     margin-inline: auto;
     width: min(90%, 30rem)
 }
+
+.center {
+    display: block;
+    margin-inline: auto;
+}
+
+.responsive {
+    max-width: 70%;
+    height: auto;
+  }
 
 /* -----------------Fonts Start-------------------- */
 h1 {
@@ -150,6 +161,37 @@ p {
 }
 
 /* ---------------- Header End ------------------- */
+
+/* ----------------- About Start -------------------- */
+.about {
+    background-color: #4a678a;
+    padding: 6rem 1rem;
+}
+
+.textbox {
+    border-radius: 1rem;
+    padding: 2rem 2rem;
+    background-color: lightgray;
+    box-shadow: 0px 0px 20px #2c3d51;
+}
+
+.textbox p {
+    color: rgb(40, 40, 40);
+    line-height: 1.2rem;
+
+}
+
+.textbox h2 {
+    color: rgb(40, 40, 40);
+    font-size: 1.46rem;
+}
+
+.textbox>*+* {
+    margin-top: 1rem;
+}
+
+/* ------------------ About End --------------------- */
+
 /* ---------------- Counter Start ------------------- */
 
 .counter {
@@ -187,39 +229,10 @@ p {
 
 /* ----------------- Counter End -------------------- */
 
-/* ----------------- About Start -------------------- */
-.about {
-    background-color: #4a678a;
-    padding: 1rem;
-}
-
-.textbox {
-    border-radius: 1rem;
-    padding: 2rem 2rem;
-    background-color: lightgray;
-    box-shadow: 0px 0px 20px #2c3d51;
-}
-
-.textbox p {
-    color: rgb(40, 40, 40);
-    line-height: 1.2rem;
-    
-}
-
-.textbox h2{
-    color: rgb(40, 40, 40);
-    font-size: 1.46rem;
-}
-
-.textbox > * + *{
-    margin-top: 1rem;
-}
-
-/* ------------------ About End --------------------- */
-
 /* ----------------- CtA Start -------------------- */
 .cta {
     background-color: white;
+    display: flex;
 }
 
 /* button */
@@ -229,15 +242,17 @@ p {
     font-size: 1.2rem;
     color: white;
     padding-block: 1rem;
-    margin: 2rem 0rem;
+margin-block: 6rem;
+
 }
 
 .btn h3 {
-    margin-top: 1rem
+    margin-top: 1rem;
+    letter-spacing: .1rem;
 }
 
 .btn p {
-    margin: 1rem 0.8rem;
+    margin: 0.6rem 0.8rem;
 }
 
 .btn img {
@@ -247,7 +262,7 @@ p {
 
 .btn:disabled {
     cursor: default;
-    opacity: .3;
+    opacity: 0.3;
 }
 
 .btn:hover {
@@ -290,14 +305,14 @@ p {
 
 .main h2 {
     color: #293b50;
-    line-height: 2rem;
+    line-height: 2.4rem;
     font-size: 2rem;
 }
 
 .main h3 {
     color: #293b50;
-    font-size: 1.4rem;
-    margin-bottom: 1vh;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
     text-align: center;
 }
 
@@ -314,19 +329,15 @@ p {
 /* ---------------- Main End ------------------- */
 /* ---------------- Footer Start ------------------- */
 footer {
-  background-color: #293b50;
-  padding:1rem;
+    background-color: #293b50;
+    padding: 1rem 0rem 1rem 10%;
 }
 
-.footer > * + *{
- margin-left: 1rem; 
+.footer>*+* {
+    margin-left: 1rem;
 }
 
 /* ---------------- Footer End ------------------- */
-
-
-
-
 /* --
 /* ---------------- MQ Start ------------------- */
 /* smartphones, portrait iPhone, portrait 480x320 phones (Android) 
@@ -351,7 +362,7 @@ footer {
         height: 70vh;
         justify-content: space-around;
 
-    }
+    
 
     .btn {
         min-height: 75px;
