@@ -150,13 +150,13 @@ p {
 
 /* ---------------- Header Start ------------------- */
 .header {
-    padding-block: 8rem;
+    padding-block: 2rem;
     background-image: url(./content/header_background.png);
 }
 
 .logo {
     display: block;
-    margin: 0 auto 4rem auto;
+    margin: 2rem auto 4rem auto;
     max-width: 90%;
 }
 
